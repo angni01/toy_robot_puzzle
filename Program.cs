@@ -28,20 +28,9 @@ public class Program
         
         var context = new SharedContext();
         var action = new Action(context);
-        //string[] faces = {"NORTH", "EAST", "SOUTH", "WEST"};
-        //int currX=0;
-        //int currY=0;
-        //string direction="";
-
-        // For Unit test
-        if (args.Length > 0)
-        {
-            context.currX = int.Parse(args[0]);
-            context.currY = int.Parse(args[1]);
-            context.direction = args[2];
-        }
 
         Console.WriteLine("Toy Robot Puzzle!");
+        Console.WriteLine("Enter command: ");
         string command = Console.ReadLine() ?? "";
 
         while (context.direction.Length == 0 || command != "REPORT")
@@ -68,6 +57,7 @@ public class Program
                     default: break;
                 }
             }
+            Console.WriteLine("Enter command: ");
             command = Console.ReadLine() ?? "";
         }
         Console.WriteLine(context.currX + ", " + context.currY + " " + context.direction); 
@@ -87,7 +77,7 @@ public class Action
             string[] value = cmdValue.Split(',');
             if(_context.direction.Length == 0)
             {
-                bool isValid = Regex.IsMatch(cmdValue, @"^[0-4],[0-4],[A-Z]+$");
+                bool isValid = Regex.IsMatch(cmdValue, @"^[0-4],[0-4],(NORTH|SOUTH|EAST|WEST)$");
                 if(isValid){
                     _context.currX = int.Parse(value[0]);
                     _context.currY = int.Parse(value[1]);

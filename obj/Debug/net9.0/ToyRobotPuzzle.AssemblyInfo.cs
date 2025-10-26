@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToyRobotPuzzle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efb488b2b069005811ada15ad0bac9d1a1ded92a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9aa90a3253b5e03b724181c9709f55014e69acc2")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToyRobotPuzzle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToyRobotPuzzle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
